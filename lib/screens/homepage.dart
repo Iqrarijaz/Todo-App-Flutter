@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Container(
             padding:
-                const EdgeInsets.symmetric(vertical: 32.0, horizontal: 24.0),
+                const EdgeInsets.symmetric(horizontal: 24.0),
             width: double.infinity,
             color: const Color(0xFFF6F6F6),
             child: Stack(
@@ -27,6 +27,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       margin: const EdgeInsets.only(
                         bottom: 32.0,
+                        top: 32.0,
                       ),
                       child: const Image(
                           image: AssetImage('assets/images/logo.png')),
@@ -60,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 Positioned(
-                  bottom: 0.0,
+                  bottom: 24.0,
                   right: 0.0,
                   child: Container(
                     width:60,
