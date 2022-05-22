@@ -13,7 +13,7 @@ class _TaskPageState extends State<TaskPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-            child: Container(
+            child: Container(color: Colors.white,
                 child: Stack(
                   children: [
                     Column(
@@ -33,9 +33,13 @@ class _TaskPageState extends State<TaskPage> {
                               image:
                                   AssetImage("assets/images/back_arrow_icon.png"))),
                     ),
-                    const Expanded(
+                Expanded(
                         child: TextField(
-                            decoration: InputDecoration(
+                          onSubmitted: (value)
+                            {
+                              print("$value");
+                            },
+                            decoration: const InputDecoration(
                               hintText: ("Enter Task Title"),
                               border: InputBorder.none,
                             ),
@@ -87,11 +91,14 @@ class _TaskPageState extends State<TaskPage> {
                             width: 60,
                             height: 60,
                             decoration: BoxDecoration(
-                              color: const Color(0xFFEC994B),
-                              borderRadius: BorderRadius.circular(20),
+                              color: const Color(0xFFee7b33),
+                              borderRadius: BorderRadius.circular(30),
                             ),
-                            child: const Image(
-                                image: AssetImage("assets/images/delete_icon.png"))),
+                            child: const Padding(
+                              padding: EdgeInsets.all(15.0),
+                              child: Image(
+                                  image: AssetImage("assets/images/delete_icon.png")),
+                            )),
                       ),
                     )
                   ],

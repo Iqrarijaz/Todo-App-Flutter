@@ -13,7 +13,7 @@ class TaskCardWidget extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 20.0),
         padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
         decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(24.0)),
+            color: const Color(0xFFe6e6e6), borderRadius: BorderRadius.circular(24.0)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -57,9 +57,12 @@ class ToDoWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6.0),
                   border: isDone
                       ? null
-                      : Border.all(color: Color(0xFF868290), width: 1.5)),
-              child: const Image(
-                  image: AssetImage("assets/images/check_icon.png"))),
+                      : Border.all(color: const Color(0xFF868290), width: 1.5)),
+              child: const Padding(
+                padding: EdgeInsets.all(1.0),
+                child: Image(
+                    image: AssetImage("assets/images/check_icon.png")),
+              )),
           Text(text.isEmpty ? "Unnamed ToDo" : text,
               style: TextStyle(
                 fontSize: 16,

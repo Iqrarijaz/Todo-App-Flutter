@@ -15,22 +15,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+
         child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             width: double.infinity,
-            color: const Color(0xFFF6F6F6),
+            color: Colors.white,
             child: Stack(
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
+                      height:100,
+                      width:100,
                       margin: const EdgeInsets.only(
                         bottom: 32.0,
                         top: 32.0,
                       ),
                       child: const Image(
-                          image: AssetImage('assets/images/logo.png')),
+                          image: AssetImage('assets/images/gif.gif')),
                     ),
                     Expanded(
                       child: ScrollConfiguration(
@@ -80,10 +83,13 @@ class _HomePageState extends State<HomePage> {
                             begin:Alignment(0.0,1.0),
                             end:Alignment(0.0,1.0)
                           ),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                        child: const Image(
-                            image: AssetImage("assets/images/add_icon.png"))),
+                        child: const Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Image(
+                              image: AssetImage("assets/images/add_icon.png")),
+                        )),
                   ),
                 )
               ],
