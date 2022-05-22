@@ -72,7 +72,11 @@ class _HomePageState extends State<HomePage> {
                         width: 60,
                         height: 60,
                         decoration: BoxDecoration(
-                          color: const Color(0xFF7349FE),
+                          gradient: const LinearGradient(
+                            colors: [Color(0xFF15133C),Color(0xFF15133C)],
+                            begin:Alignment(0.0,1.0),
+                            end:Alignment(0.0,1.0)
+                          ),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: const Image(
