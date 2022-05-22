@@ -33,29 +33,32 @@ class _HomePageState extends State<HomePage> {
                           image: AssetImage('assets/images/logo.png')),
                     ),
                     Expanded(
-                      child: ListView(
-                        children: [
-                          TaskCardWidget(
-                              title: 'Get Started !',
-                              description:
-                                  "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
-                          TaskCardWidget(
-                              title: 'Get Started !',
-                              description:
-                                  "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
-                          TaskCardWidget(
-                              title: 'Get Started !',
-                              description:
-                                  "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
-                          TaskCardWidget(
-                              title: 'Get Started !',
-                              description:
-                                  "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
-                          TaskCardWidget(
-                            title: '',
-                            description: '',
-                          ),
-                        ],
+                      child: ScrollConfiguration(
+                        behavior:NoGlowBehaviour(),
+                        child: ListView(
+                          children: [
+                            TaskCardWidget(
+                                title: 'Get Started !',
+                                description:
+                                    "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
+                            TaskCardWidget(
+                                title: 'Get Started !',
+                                description:
+                                    "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
+                            TaskCardWidget(
+                                title: 'Get Started !',
+                                description:
+                                    "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
+                            TaskCardWidget(
+                                title: 'Get Started !',
+                                description:
+                                    "Hello User ! Welcome to WHAT-TODO app, This is a default task that you can edit"),
+                            TaskCardWidget(
+                              title: '',
+                              description: '',
+                            ),
+                          ],
+                        ),
                       ),
                     )
                   ],
@@ -73,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                         height: 60,
                         decoration: BoxDecoration(
                           gradient: const LinearGradient(
-                            colors: [Color(0xFF15133C),Color(0xFF15133C)],
+                            colors: [Color(0xFF15133F),Color(0xFF15133C)],
                             begin:Alignment(0.0,1.0),
                             end:Alignment(0.0,1.0)
                           ),
