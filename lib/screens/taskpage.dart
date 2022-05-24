@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo/Widgets/task_card_widget.dart';
+import 'package:todo/database/database_helper.dart';
+import 'package:todo/model/task.dart';
 
 class TaskPage extends StatefulWidget {
   const TaskPage({Key? key}) : super(key: key);
@@ -35,15 +37,22 @@ class _TaskPageState extends State<TaskPage> {
                     ),
                 Expanded(
                         child: TextField(
-                          onSubmitted: (value)
+                          onSubmitted: (value) async
                             {
                               print("$value");
+                              if (value.isNotEmpty){
+                                DatabaseHelper _dbHelper = DatabaseHelper();
+                                Task _newTask =  Task(
+                                  title:value, id: 1, description: ''
+                                );
+                                await _dbHelper.insertTask(_newTask);
+                              }
                             },
                             decoration: const InputDecoration(
                               hintText: ("Enter Task Title"),
                               border: InputBorder.none,
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontSize: 26,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xFF211551))))
